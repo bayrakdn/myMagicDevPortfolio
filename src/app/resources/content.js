@@ -1,15 +1,16 @@
 import { InlineCode } from "@/once-ui/components";
+import { Button } from "@/once-ui/components"; // ✅ Needed
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Deniz",
+  lastName: "Bayrak",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Electric And Electronic Engineer",
+  avatar: "/deniz.JPG", // Path to your avatar image
+  location: "Europe/Istanbul", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -17,8 +18,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I post about new projects I've been working on or ones that are complete.
     </>
   ),
 };
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/bayrakdn",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/deniz-bayrak-1912872b9/",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "bayrakdn@gmail.com",
   },
 ];
 
@@ -52,11 +52,14 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Electric And Electronic Engineer & AI Developer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      <p>
+  I’m Deniz, an Electrical and Electronics Engineering student passionate about software and AI development.<br />
+  In my spare time, I work on several projects including AVT (Alternative Vehicle) to compete with other universities in Turkey.<br />
+</p>
+
     </>
   ),
 };
@@ -81,111 +84,128 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm an Istanbul-based electrical and electronics engineering student with a strong passion for intelligent systems and sustainable mobility. Currently, I'm part of the AVT university team, where we're building an electric vehicle to compete in the TÜBİTAK efficiency challenge.
+
+        <br />
+        <br />
+
+        My responsibilities include hardware design and battery system development, and I also contribute to the software and AI side — especially in embedded systems and intelligent control. I enjoy working across disciplines to solve real-world engineering problems and love creating systems where electronics and software come together in innovative ways.
+
+        <br />
+        <br />
+
+        <Button
+          as="a"
+          href="/deniz-cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="m"
+          variant="primary"
+          arrowIcon
+        >
+          📄 Download My CV
+        </Button>
       </>
     ),
-  },
+  },                          
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Team & Project Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "AVT - Alternative Vehicles Team",
+        timeframe: "2025 - Present",
+        role: "Hardware, Battery Systems and AI Engineer | Software Contributor",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Working on the development of an electric vehicle for the TÜBİTAK Efficiency Challenge.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Responsible for battery system design, high-voltage safety, and embedded system integration.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Also working on the software and AI department on intelligent control and telemetry systems.
           </>,
         ],
         images: [],
       },
     ],
-  },
+  }, 
   studies: {
     display: true, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Bahçeşehir University",
+        description: <>Electric & Electronic Engineer.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Embedded Systems",
+        description: (
+          <>
+            Experienced in working with microcontrollers (STM32, Arduino) for hardware control,
+            data acquisition, and real-time system management.
+          </>
+        ),
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Battery Systems & High Voltage Safety",
+        description: (
+          <>
+            Skilled in battery management, system design, and safety protocols for electric vehicle development.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "MATLAB & Simulink",
+        description: (
+          <>
+            Used for modeling, simulation, and analysis of control systems, power electronics, and battery behavior.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Python & AI",
+        description: (
+          <>
+            Applied Python in embedded AI projects and intelligent vehicle functions. Familiar with data processing,
+            control logic, and machine learning basics.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Swift & Apple Vision Pro",
+        description: (
+          <>
+            Developed an immersive app for Apple Vision Pro using Swift and RealityKit,
+            combining spatial interfaces with Apple’s visionOS framework.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "C/C++",
+        description: (
+          <>
+            Used in embedded development for low-level hardware communication and logic control.
+          </>
+        ),
+        images: [],
       },
     ],
   },
 };
+  
 
 const blog = {
   label: "Blog",
@@ -199,8 +219,6 @@ const work = {
   label: "Work",
   title: "My projects",
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
